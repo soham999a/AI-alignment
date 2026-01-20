@@ -2,9 +2,9 @@ import HeroSection from '../components/HeroSection';
 import { AdjustmentsHorizontalIcon, BoltIcon, ExclamationTriangleIcon } from '@heroicons/react/24/outline';
 
 const FeatureCard = ({ title, description, icon: Icon, colorClass }: any) => (
-    <div className="p-6 bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-2xl flex items-start gap-6 shadow-sm hover:shadow-md transition-shadow">
-        <div className={`size-14 shrink-0 rounded-xl flex items-center justify-center ${colorClass}`}>
-            <Icon className="size-6" />
+    <div className="p-6 bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-2xl flex flex-col sm:flex-row items-start gap-6 shadow-sm hover:shadow-md transition-shadow">
+        <div className={`size-12 md:size-14 shrink-0 rounded-xl flex items-center justify-center ${colorClass}`}>
+            <Icon className="size-5 md:size-6" />
         </div>
         <div className="flex flex-col gap-2">
             <h3 className="text-[#111318] dark:text-white text-lg font-bold leading-tight">{title}</h3>

@@ -6,26 +6,26 @@ const Simulator = () => {
     return (
         <div className="animate-in fade-in duration-700">
             <section className="px-4 py-12 md:py-20 max-w-6xl mx-auto">
-                <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 md:mb-12">
                     <div className="flex flex-col gap-4">
-                        <h1 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white leading-[1.1]">
+                        <h1 className="text-3xl md:text-5xl font-black text-gray-900 dark:text-white leading-[1.1]">
                             Alignment Lab <span className="text-blue-600">Simulator</span>
                         </h1>
-                        <p className="text-[#606e8a] dark:text-gray-400 text-lg font-medium max-w-xl">
+                        <p className="text-[#606e8a] dark:text-gray-400 text-base md:text-lg font-medium max-w-xl">
                             Experience the friction between human values and machine optimization. Define a goal, set boundaries, and observe the systemic consequences.
                         </p>
                     </div>
-                    <div className="flex items-center gap-2 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800 rounded-xl text-xs font-bold text-blue-700 dark:text-blue-400">
-                        <Info size={16} />
+                    <div className="flex items-center gap-2 p-3 md:p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800 rounded-xl text-[10px] md:text-xs font-bold text-blue-700 dark:text-blue-400 self-start md:self-auto">
+                        <Info size={16} className="shrink-0" />
                         <span>Deterministic rule-based simulation engine v1.0</span>
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                    <div className="lg:col-span-5">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-start">
+                    <div className="lg:col-span-5 order-1">
                         <SimulatorPanel />
                     </div>
-                    <div className="lg:col-span-7">
+                    <div className="lg:col-span-7 order-2">
                         <OutcomeCard />
                     </div>
                 </div>

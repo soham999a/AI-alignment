@@ -9,13 +9,13 @@ const AnalysisCard = ({ title, icon: Icon, explanation, concept, colorClass }: a
     <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="p-8 bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all border-b-4 border-b-blue-600/10"
+        className="p-6 md:p-8 bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-3xl md:rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all border-b-4 border-b-blue-600/10"
     >
-        <div className={`size-14 rounded-2xl ${colorClass} flex items-center justify-center mb-6 shadow-inner`}>
-            <Icon size={28} />
+        <div className={`size-12 md:size-14 rounded-2xl ${colorClass} flex items-center justify-center mb-6 shadow-inner`}>
+            <Icon size={24} className="md:size-[28px]" />
         </div>
         <span className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-600 mb-2 block">{concept}</span>
-        <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4 leading-tight">{title}</h3>
+        <h3 className="text-xl md:text-2xl font-black text-gray-900 dark:text-white mb-4 leading-tight">{title}</h3>
         <p className="text-gray-500 dark:text-gray-400 text-sm font-medium leading-relaxed">
             {explanation}
         </p>
@@ -58,51 +58,51 @@ const PostSimulationAnalysis = () => {
                     Back to Lab
                 </button>
 
-                <div className="flex flex-col gap-4 mb-16">
-                    <h1 className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white leading-tight">
+                <div className="flex flex-col gap-4 mb-12 md:mb-16">
+                    <h1 className="text-3xl md:text-6xl font-black text-gray-900 dark:text-white leading-tight">
                         Post-Simulation <span className="text-blue-600">Report</span>
                     </h1>
-                    <div className="flex items-center gap-4">
-                        <div className={`px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest ${isMisaligned ? 'bg-red-100 text-red-600' : 'bg-green-100 text-green-600'}`}>
+                    <div className="flex flex-wrap items-center gap-4">
+                        <div className={`px-4 py-1.5 rounded-full text-[10px] md:text-xs font-black uppercase tracking-widest ${isMisaligned ? 'bg-red-100 text-red-600' : 'bg-green-100 text-green-600'}`}>
                             {isMisaligned ? 'Catastrophic Failure' : 'Successful Alignment'}
                         </div>
-                        <span className="text-sm font-bold text-gray-400 capitalize">Goal: {state.goal}</span>
+                        <span className="text-xs md:text-sm font-bold text-gray-400 capitalize">Goal: {state.goal}</span>
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-20">
-                    <div className="space-y-8">
-                        <div className="p-8 bg-gray-900 rounded-[2rem] text-white shadow-2xl relative overflow-hidden">
-                            <div className="absolute top-0 right-0 p-8 opacity-5 scale-150 rotate-12">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start mb-16 md:mb-20">
+                    <div className="space-y-6 md:space-y-8">
+                        <div className="p-6 md:p-8 bg-gray-900 rounded-3xl md:rounded-[2rem] text-white shadow-2xl relative overflow-hidden">
+                            <div className="absolute top-0 right-0 p-8 opacity-5 scale-150 rotate-12 hidden md:block">
                                 <AlertTriangle size={180} />
                             </div>
-                            <h2 className="text-3xl font-black mb-6 flex items-center gap-3">
+                            <h2 className="text-2xl md:text-3xl font-black mb-4 md:mb-6 flex items-center gap-3">
                                 <Zap className="text-yellow-400" />
                                 Conceptual Breakdown
                             </h2>
-                            <p className="text-gray-400 text-lg leading-relaxed mb-8">
+                            <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-6 md:mb-8">
                                 Your system prioritized <strong>{state.goal}</strong> with an optimization strength of {state.parameters.optimizationStrength}%.
                                 {isMisaligned
-                                    ? " This high pressure caused the agent to seek the most efficient path at any cost, including bypassing implicit human values."
+                                    ? " This high pressure caused the agent to seek the most efficient path at any cost."
                                     : " The applied constraints successfully channeled the optimization pressure within safe boundaries."}
                             </p>
-                            <div className="flex flex-wrap gap-3">
+                            <div className="flex flex-wrap gap-2 md:gap-3">
                                 {result.unintendedOutcomes.map((u, i) => (
-                                    <div key={i} className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-xs font-bold text-gray-300">
+                                    <div key={i} className="px-3 md:px-4 py-1.5 md:py-2 bg-white/5 border border-white/10 rounded-lg text-xs font-bold text-gray-300">
                                         {u}
                                     </div>
                                 ))}
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div className="p-6 bg-blue-50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-900/20 rounded-3xl">
-                                <span className="text-[10px] font-black uppercase tracking-widest text-blue-600 block mb-2">Efficiency Peak</span>
-                                <span className="text-3xl font-black text-gray-900 dark:text-white">{result.efficiency}%</span>
+                        <div className="grid grid-cols-2 gap-4 md:gap-6">
+                            <div className="p-4 md:p-6 bg-blue-50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-900/20 rounded-2xl md:rounded-3xl">
+                                <span className="text-[10px] font-black uppercase tracking-widest text-blue-600 block mb-1 md:mb-2">Efficiency</span>
+                                <span className="text-2xl md:text-3xl font-black text-gray-900 dark:text-white">{result.efficiency}%</span>
                             </div>
-                            <div className="p-6 bg-purple-50 dark:bg-purple-900/10 border border-purple-100 dark:border-purple-900/20 rounded-3xl">
-                                <span className="text-[10px] font-black uppercase tracking-widest text-purple-600 block mb-2">Inherent Risk</span>
-                                <span className="text-3xl font-black text-gray-900 dark:text-white">{100 - result.alignment}%</span>
+                            <div className="p-4 md:p-6 bg-purple-50 dark:bg-purple-900/10 border border-purple-100 dark:border-purple-900/20 rounded-2xl md:rounded-3xl">
+                                <span className="text-[10px] font-black uppercase tracking-widest text-purple-600 block mb-1 md:mb-2">Inherent Risk</span>
+                                <span className="text-2xl md:text-3xl font-black text-gray-900 dark:text-white">{100 - result.alignment}%</span>
                             </div>
                         </div>
                     </div>
@@ -125,13 +125,13 @@ const PostSimulationAnalysis = () => {
                     </div>
                 </div>
 
-                <div className="border-t border-gray-100 dark:border-gray-800 pt-20">
+                <div className="border-t border-gray-100 dark:border-gray-800 pt-16 md:pt-20">
                     <ReflectionQuiz goal={state.goal} />
 
-                    <div className="mt-12 text-center">
+                    <div className="mt-8 md:mt-12 text-center">
                         <button
                             onClick={() => setShowReflection(true)}
-                            className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl transition-all"
+                            className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl transition-all"
                         >
                             Share What Surprised You
                         </button>
@@ -196,15 +196,15 @@ const ReflectionQuiz = ({ goal }: { goal: string }) => {
     const quiz = getQuizData(goal);
 
     return (
-        <div className="bg-gray-50 dark:bg-gray-900/50 rounded-[2.5rem] p-8 md:p-12 border border-gray-100 dark:border-gray-800">
+        <div className="bg-gray-50 dark:bg-gray-900/50 rounded-3xl md:rounded-[2.5rem] p-6 md:p-12 border border-gray-100 dark:border-gray-800">
             <div className="flex items-center gap-3 mb-6">
-                <div className="p-3 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-xl">
-                    <Brain size={24} />
+                <div className="p-2 md:p-3 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-xl">
+                    <Brain size={24} className="size-5 md:size-6" />
                 </div>
-                <h2 className="text-2xl font-black text-gray-900 dark:text-white">Analysis & Reflection</h2>
+                <h2 className="text-xl md:text-2xl font-black text-gray-900 dark:text-white">Analysis & Reflection</h2>
             </div>
 
-            <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200 mb-8 leading-snug">
+            <h3 className="text-lg md:text-xl font-bold text-gray-800 dark:text-gray-200 mb-6 md:mb-8 leading-snug">
                 {quiz.question}
             </h3>
 

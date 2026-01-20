@@ -6,22 +6,22 @@ const CaseStudy = () => {
         <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 dark:from-gray-950 dark:to-gray-900">
             <section className="px-4 py-16 md:py-24 max-w-4xl mx-auto">
                 {/* Header */}
-                <div className="mb-16">
+                <div className="mb-12 md:mb-16">
                     <Link to="/" className="text-sm font-bold text-blue-600 hover:text-blue-700 mb-6 inline-block">
                         ← Back to Lab
                     </Link>
                     <div className="flex items-center gap-3 mb-6">
-                        <div className="p-3 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-xl">
-                            <BookOpen size={28} />
+                        <div className="p-2 md:p-3 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-xl">
+                            <BookOpen size={24} className="size-6 md:size-[28px]" />
                         </div>
-                        <span className="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-600 text-xs font-black uppercase tracking-wider rounded-full">
+                        <span className="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-600 text-[10px] md:text-xs font-black uppercase tracking-wider rounded-full">
                             Creator's Story
                         </span>
                     </div>
-                    <h1 className="text-5xl md:text-6xl font-black text-gray-900 dark:text-white leading-tight mb-6">
+                    <h1 className="text-3xl md:text-6xl font-black text-gray-900 dark:text-white leading-tight mb-6">
                         I Tried to Design a "Safe" AI
                     </h1>
-                    <p className="text-xl text-gray-600 dark:text-gray-400 font-medium leading-relaxed">
+                    <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 font-medium leading-relaxed">
                         It failed anyway. Here's why that scared me—and why I built this.
                     </p>
                 </div>
@@ -97,25 +97,25 @@ const CaseStudy = () => {
                     </div>
 
                     {/* Section 4: The Solution */}
-                    <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/10 dark:to-purple-900/10 rounded-3xl p-8 border-2 border-blue-200 dark:border-blue-900/30">
+                    <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/10 dark:to-purple-900/10 rounded-3xl p-6 md:p-8 border-2 border-blue-200 dark:border-blue-900/30">
                         <h2 className="text-2xl font-black text-gray-900 dark:text-white mb-4">So I Built This</h2>
-                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        <p className="text-gray-700 dark:text-gray-300 text-sm md:text-lg leading-relaxed">
                             The <strong>Alignment Lab</strong> is not about teaching you theory. It's about letting you <em>feel</em> the problem.
                         </p>
-                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        <p className="text-gray-700 dark:text-gray-300 text-sm md:text-lg leading-relaxed">
                             When you design a goal, set constraints, and watch your "safe" system fail catastrophically, you understand viscerally why this is hard.
                         </p>
-                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        <p className="text-gray-700 dark:text-gray-300 text-sm md:text-lg leading-relaxed">
                             You understand why researchers like Stuart Russell, Paul Christiano, and Eliezer Yudkowsky spend their careers on this problem.
                         </p>
-                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        <p className="text-gray-700 dark:text-gray-300 text-sm md:text-lg leading-relaxed">
                             Because alignment isn't a technical detail. It's <strong>the</strong> technical detail. The one that determines whether advanced AI systems help us or destroy us.
                         </p>
                         <div className="mt-8 pt-6 border-t border-blue-200 dark:border-blue-900/30">
-                            <p className="text-sm text-gray-600 dark:text-gray-400 italic">
+                            <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400 italic">
                                 "The AI does not hate you, nor does it love you, but you are made out of atoms which it can use for something else."
                             </p>
-                            <p className="text-sm font-bold text-gray-700 dark:text-gray-300 mt-2">
+                            <p className="text-xs md:text-sm font-bold text-gray-700 dark:text-gray-300 mt-2">
                                 — Eliezer Yudkowsky
                             </p>
                         </div>

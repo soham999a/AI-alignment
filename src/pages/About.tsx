@@ -3,12 +3,12 @@ import { Terminal, Shield, Cpu, BookOpen } from 'lucide-react';
 const About = () => {
     return (
         <div className="animate-in fade-in duration-700">
-            <section className="px-4 py-20 max-w-4xl mx-auto">
-                <div className="mb-16">
-                    <h1 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-6">
+            <section className="px-6 py-12 md:py-20 max-w-4xl mx-auto">
+                <div className="mb-12 md:mb-16">
+                    <h1 className="text-3xl md:text-5xl font-black text-gray-900 dark:text-white mb-6">
                         Lab <span className="text-blue-600">Philosophy</span>
                     </h1>
-                    <p className="text-xl text-[#606e8a] dark:text-gray-400 font-medium leading-relaxed">
+                    <p className="text-lg md:text-xl text-[#606e8a] dark:text-gray-400 font-medium leading-relaxed">
                         Alignment Lab exists to bridge the gap between abstract AI safety research and tangible engineering experience.
                     </p>
                 </div>
@@ -35,16 +35,16 @@ const About = () => {
                         </div>
                     </div>
 
-                    <div className="p-10 bg-gray-900 rounded-[2rem] text-white overflow-hidden relative">
-                        <div className="absolute top-0 right-0 p-8 opacity-10">
+                    <div className="p-6 md:p-10 bg-gray-900 rounded-3xl md:rounded-[2rem] text-white overflow-hidden relative">
+                        <div className="absolute top-0 right-0 p-8 opacity-10 hidden md:block">
                             <Terminal size={120} />
                         </div>
                         <div className="relative z-10 max-w-2xl">
-                            <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                            <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 flex items-center gap-2">
                                 <BookOpen size={20} className="text-blue-400" />
                                 The Alignment Problem
                             </h3>
-                            <p className="text-gray-400 leading-relaxed mb-6 font-medium">
+                            <p className="text-gray-400 text-sm md:text-lg leading-relaxed mb-6 md:mb-8 font-medium">
                                 "The core of the problem is that we do not know how to specify what we want in a way that is robust to the extreme optimization pressure of modern machine learning."
                             </p>
                             <div className="flex items-center gap-4">

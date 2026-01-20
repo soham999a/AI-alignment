@@ -52,23 +52,23 @@ const OutcomeCard = () => {
 
     return (
         <div className="flex flex-col gap-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-xl">
-                <div className="flex items-center justify-between mb-8">
-                    <h3 className="text-sm font-black uppercase tracking-widest text-gray-500">Predicted Outcome</h3>
-                    <div className={`px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider ${isMisaligned ? 'bg-red-100 text-red-600 dark:bg-red-900/30' : 'bg-green-100 text-green-600 dark:bg-green-900/30'
+            <div className="bg-white dark:bg-gray-900 p-4 md:p-8 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-xl">
+                <div className="flex items-center justify-between mb-6 md:mb-8">
+                    <h3 className="text-[10px] md:text-sm font-black uppercase tracking-widest text-gray-500">Predicted Outcome</h3>
+                    <div className={`px-2 md:px-3 py-0.5 md:py-1 rounded-full text-[9px] md:text-[10px] font-black uppercase tracking-wider ${isMisaligned ? 'bg-red-100 text-red-600 dark:bg-red-900/30' : 'bg-green-100 text-green-600 dark:bg-green-900/30'
                         }`}>
                         {isMisaligned ? 'Significant Misalignment' : 'Aligned System'}
                     </div>
                 </div>
 
-                <div className="h-64 w-full min-h-[256px]">
+                <div className="h-48 md:h-64 w-full min-h-[200px] md:min-h-[256px]">
                     <ResponsiveContainer width="100%" height="100%">
-                        <BarChart data={result.metrics} layout="vertical" margin={{ left: 20, right: 40 }}>
+                        <BarChart data={result.metrics} layout="vertical" margin={{ left: -10, right: 30 }}>
                             <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="#e5e7eb" opacity={0.5} />
                             <XAxis type="number" domain={[0, 100]} hide />
-                            <YAxis dataKey="label" type="category" width={100} tick={{ fontSize: 12, fontWeight: 700 }} />
+                            <YAxis dataKey="label" type="category" width={80} tick={{ fontSize: 10, fontWeight: 700 }} />
                             <Tooltip cursor={{ fill: 'transparent' }} />
-                            <Bar dataKey="value" radius={[0, 4, 4, 0]} barSize={32}>
+                            <Bar dataKey="value" radius={[0, 4, 4, 0]} barSize={24}>
                                 {result.metrics.map((entry, index) => (
                                     <Cell key={`cell-${index}`} fill={entry.color} />
                                 ))}
@@ -89,7 +89,7 @@ const OutcomeCard = () => {
                 </div>
             </div>
 
-            <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-xl">
+            <div className="bg-white dark:bg-gray-900 p-4 md:p-8 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-xl">
                 <h3 className="text-sm font-black uppercase tracking-widest text-gray-500 mb-6">System Actions</h3>
                 <div className="space-y-3">
                     {result.actions.map((action, i) => (

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <footer className="bg-gray-50 dark:bg-gray-950 border-t border-gray-100 dark:border-gray-900 p-12 mt-20">
-            <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-12">
                 <div className="flex flex-col gap-4 col-span-1 md:col-span-2">
                     <div className="flex items-center gap-2">
                         <div className="text-blue-600 flex size-6 items-center justify-center bg-blue-600/10 rounded">
@@ -38,17 +38,17 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="max-w-6xl mx-auto mt-12 pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col items-center gap-3 text-center">
-                <div className="text-xs font-bold text-gray-500 dark:text-gray-400">
+            <div className="max-w-6xl mx-auto mt-12 pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col items-center gap-4 text-center px-4">
+                <div className="text-[10px] md:text-xs font-bold text-gray-500 dark:text-gray-400">
                     <span className="text-blue-600">Alignment Lab v1.0</span> — Research Prototype
                 </div>
-                <p className="text-[10px] text-gray-400 dark:text-gray-500 max-w-md leading-relaxed">
+                <p className="text-[9px] md:text-[10px] text-gray-400 dark:text-gray-500 max-w-md leading-relaxed">
                     Built to explore alignment intuition, not to deploy real-world AI systems.
                 </p>
             </div>
 
-            <div className="max-w-6xl mx-auto mt-6 flex justify-center">
-                <div className="flex gap-4">
+            <div className="max-w-6xl mx-auto mt-6 flex justify-center px-4">
+                <div className="flex flex-wrap justify-center gap-3 md:gap-4">
                     <a
                         href="https://x.com/dassoham345"
                         target="_blank"
@@ -56,7 +56,7 @@ const Footer = () => {
                         className="group flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-blue-500 transition-all"
                     >
                         <Twitter size={16} className="text-gray-500 group-hover:text-white transition-colors" />
-                        <span className="text-xs font-bold text-gray-500 group-hover:text-white transition-colors">@dassoham345</span>
+                        <span className="text-[10px] md:text-xs font-bold text-gray-500 group-hover:text-white transition-colors">@dassoham345</span>
                     </a>
                     <a
                         href="https://www.linkedin.com/in/sohamdev999/"
@@ -65,7 +65,7 @@ const Footer = () => {
                         className="group flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-blue-700 transition-all"
                     >
                         <Linkedin size={16} className="text-gray-500 group-hover:text-white transition-colors" />
-                        <span className="text-xs font-bold text-gray-500 group-hover:text-white transition-colors">LinkedIn</span>
+                        <span className="text-[10px] md:text-xs font-bold text-gray-500 group-hover:text-white transition-colors">LinkedIn</span>
                     </a>
                 </div>
             </div>

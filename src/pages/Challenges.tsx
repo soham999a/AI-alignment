@@ -45,17 +45,17 @@ const Challenges = () => {
 
     return (
         <div className="animate-in fade-in duration-700">
-            <section className="px-4 py-20 max-w-6xl mx-auto">
-                <div className="text-center mb-20 max-w-3xl mx-auto">
-                    <h1 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-6 leading-tight">
+            <section className="px-4 py-12 md:py-20 max-w-6xl mx-auto">
+                <div className="text-center mb-12 md:mb-20 max-w-3xl mx-auto">
+                    <h1 className="text-3xl md:text-5xl font-black text-gray-900 dark:text-white mb-6 leading-tight">
                         Alignment <span className="text-blue-600">Challenges</span>
                     </h1>
-                    <p className="text-[#606e8a] dark:text-gray-400 text-lg font-medium leading-relaxed">
+                    <p className="text-[#606e8a] dark:text-gray-400 text-base md:text-lg font-medium leading-relaxed">
                         Put your alignment intuition to the test. Successfully design systems that achieve objectives without sacrificing human values.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                     {challenges.map((c, i) => (
                         <ChallengeCard
                             key={i}
