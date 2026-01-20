@@ -1,4 +1,4 @@
-import { LogOut, User as UserIcon, FlaskConical, Menu, X } from 'lucide-react';
+import { LogOut, User as UserIcon, Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useAuthStore } from '../store/useAuthStore';
 import { useState, useEffect } from 'react';
