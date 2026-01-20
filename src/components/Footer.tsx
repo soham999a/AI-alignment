@@ -40,7 +40,7 @@ const Footer = () => {
 
             <div className="max-w-6xl mx-auto mt-12 pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col items-center gap-4 text-center px-4">
                 <div className="text-[10px] md:text-xs font-bold text-gray-500 dark:text-gray-400">
-                    <span className="text-blue-600">Alignment Lab v1.0</span> — Research Prototype
+                    <span className="text-blue-600">Alignment Lab v1.0</span> — Made by <span className="text-gray-900 dark:text-white font-black">SOHAM</span>
                 </div>
                 <p className="text-[9px] md:text-[10px] text-gray-400 dark:text-gray-500 max-w-md leading-relaxed">
                     Built to explore alignment intuition, not to deploy real-world AI systems.

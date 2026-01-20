@@ -26,8 +26,8 @@ const Navbar = () => {
         <header className="sticky top-0 z-50 bg-white/80 dark:bg-[#101622]/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-800">
             <div className="flex items-center p-4 justify-between max-w-6xl mx-auto">
                 <Link to="/" className="flex items-center gap-2">
-                    <div className="text-blue-600 flex size-8 shrink-0 items-center justify-center bg-blue-600/10 rounded-lg">
-                        <FlaskConical size={20} />
+                    <div className="size-8 shrink-0 overflow-hidden rounded-lg">
+                        <img src="/logo.png" alt="Logo" className="size-full object-cover" />
                     </div>
                     <div className="flex items-center gap-2">
                         <h2 className="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-tight whitespace-nowrap">Alignment Lab</h2>
